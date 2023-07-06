@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vitamins_colors",
+  "info": {
+    "singularName": "vitamins-color",
+    "pluralName": "vitamins-colors",
+    "displayName": "vitaminsColor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "vitamins_classes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vitamins-class.vitamins-class",
+      "mappedBy": "vitamins_color"
+    }
+  }
+}

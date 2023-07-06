@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vitamins_classes",
+  "info": {
+    "singularName": "vitamins-class",
+    "pluralName": "vitamins-classes",
+    "displayName": "vitaminsClass",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "vitamins_color": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vitamins-color.vitamins-color",
+      "inversedBy": "vitamins_classes"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "class"
+    }
+  }
+}
