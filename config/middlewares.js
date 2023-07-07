@@ -8,15 +8,5 @@ module.exports = [
   "strapi::body",
   "strapi::session",
   "strapi::favicon",
-  {
-    name: "strapi::public",
-    enabled: true,
-    options: {
-      maxAge: 3600,
-      etag: true,
-      lastModified: true,
-      cacheControl: "public",
-      expires: true,
-    },
-  },
+  "strapi::public",
 ];
